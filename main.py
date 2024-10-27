@@ -1,6 +1,7 @@
 mas = [5, 7, 4, 3, 8, 2, 5]
 
 
+# O(n^2) так как 2 вложенных цикла, дающих ~ n*n/2 = O(n^2)
 def buble_sort(mas):
     for i in range(len(mas) - 1):
         for j in range(len(mas) - i - 1):
@@ -9,6 +10,7 @@ def buble_sort(mas):
     return mas
 
 
+# O(n * log(n)) так как в сортировке перемещается каждый элемент, и происходит дробление на 2 (3) части
 def quick_sort(mas):
     if len(mas) <= 1:
         return mas
@@ -19,6 +21,7 @@ def quick_sort(mas):
     return quick_sort(left) + middle + quick_sort(right)
 
 
+# O(n^2) так как 2 вложенных цикла, дающих ~ n*n/2 = O(n^2)
 def selection_sort(mas):
     for i in range(len(mas) - 1):
         min_index = i
@@ -29,6 +32,7 @@ def selection_sort(mas):
     return mas
 
 
+# O(n^2) так как 2 вложенных цикла, дающих ~ n*n/2 = O(n^2)
 def insert_sort(mas):
     for i in range(1, len(mas)):
         key = mas[i]
